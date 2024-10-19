@@ -2,7 +2,7 @@ object frm_calculadora: Tfrm_calculadora
   Left = 0
   Top = 0
   Caption = 'Calculadora'
-  ClientHeight = 306
+  ClientHeight = 279
   ClientWidth = 250
   Position = ScreenCenter
   FormFactor.Width = 320
@@ -11,7 +11,7 @@ object frm_calculadora: Tfrm_calculadora
   DesignerMasterStyle = 0
   object caixa_botoes: TLayout
     Position.X = -239.000000000000000000
-    Position.Y = -110.000000000000000000
+    Position.Y = -142.000000000000000000
     Size.Width = 505.000000000000000000
     Size.Height = 442.000000000000000000
     Size.PlatformDefault = False
@@ -35,6 +35,7 @@ object frm_calculadora: Tfrm_calculadora
       TabOrder = 13
       Text = '1'
       TextSettings.Trimming = None
+      OnClick = btn_1Click
     end
     object btn_2: TButton
       Position.X = 310.000000000000000000
@@ -45,6 +46,7 @@ object frm_calculadora: Tfrm_calculadora
       TabOrder = 9
       Text = '2'
       TextSettings.Trimming = None
+      OnClick = btn_2Click
     end
     object btn_3: TButton
       Position.X = 368.000000000000000000
@@ -55,6 +57,7 @@ object frm_calculadora: Tfrm_calculadora
       TabOrder = 6
       Text = '3'
       TextSettings.Trimming = None
+      OnClick = btn_3Click
     end
     object btn_4: TButton
       Position.X = 252.000000000000000000
@@ -65,6 +68,7 @@ object frm_calculadora: Tfrm_calculadora
       TabOrder = 11
       Text = '4'
       TextSettings.Trimming = None
+      OnClick = btn_4Click
     end
     object btn_5: TButton
       Position.X = 310.000000000000000000
@@ -75,6 +79,7 @@ object frm_calculadora: Tfrm_calculadora
       TabOrder = 8
       Text = '5'
       TextSettings.Trimming = None
+      OnClick = btn_5Click
     end
     object btn_6: TButton
       Position.X = 368.000000000000000000
@@ -85,6 +90,7 @@ object frm_calculadora: Tfrm_calculadora
       TabOrder = 4
       Text = '6'
       TextSettings.Trimming = None
+      OnClick = btn_6Click
     end
     object btn_7: TButton
       Position.X = 252.000000000000000000
@@ -95,6 +101,7 @@ object frm_calculadora: Tfrm_calculadora
       TabOrder = 10
       Text = '7'
       TextSettings.Trimming = None
+      OnClick = btn_7Click
     end
     object btn_8: TButton
       Position.X = 310.000000000000000000
@@ -105,6 +112,7 @@ object frm_calculadora: Tfrm_calculadora
       TabOrder = 7
       Text = '8'
       TextSettings.Trimming = None
+      OnClick = btn_8Click
     end
     object btn_9: TButton
       Position.X = 368.000000000000000000
@@ -115,6 +123,7 @@ object frm_calculadora: Tfrm_calculadora
       TabOrder = 3
       Text = '9'
       TextSettings.Trimming = None
+      OnClick = btn_9Click
     end
     object btn_dividir: TButton
       Position.X = 426.000000000000000000
@@ -188,37 +197,63 @@ object frm_calculadora: Tfrm_calculadora
       Size.Height = 96.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 17
-      object txt_numero1: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 1
-        ReadOnly = True
-        Position.X = 14.000000000000000000
-        Position.Y = 40.000000000000000000
-        Size.Width = 49.000000000000000000
-        Size.Height = 41.000000000000000000
-        Size.PlatformDefault = False
-      end
       object lb_operador: TLabel
         StyledSettings = [Family, Style, FontColor]
         Position.X = 71.000000000000000000
         Position.Y = 40.000000000000000000
-        Size.Width = 50.000000000000000000
-        Size.Height = 34.000000000000000000
+        Size.Width = 18.000000000000000000
+        Size.Height = 41.000000000000000000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 30.000000000000000000
         TextSettings.HorzAlign = Center
         Text = '.'
         TabOrder = 2
       end
-      object txt_numero2: TEdit
+      object lb_igual: TLabel
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 155.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 22.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 30.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '='
+        TabOrder = 1
+      end
+      object txt_resultado: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         TabOrder = 0
         ReadOnly = True
-        Position.X = 129.000000000000000000
+        Position.X = 185.000000000000000000
         Position.Y = 40.000000000000000000
         Size.Width = 50.000000000000000000
         Size.Height = 41.000000000000000000
         Size.PlatformDefault = False
+      end
+      object lb_numero1: TLabel
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 13.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '0'
+        TabOrder = 3
+      end
+      object lb_numero2: TLabel
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 97.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '0'
+        TabOrder = 4
       end
     end
   end
