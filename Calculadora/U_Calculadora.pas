@@ -30,9 +30,13 @@ type
     caixa_topo: TLayout;
     lb_operador: TLabel;
     lb_igual: TLabel;
-    txt_resultado: TEdit;
     lb_numero1: TLabel;
     lb_numero2: TLabel;
+    btn_apagar: TButton;
+    btn_limpar: TButton;
+    lb_resultado: TLabel;
+    btn_c: TButton;
+    btn_porcentagem: TButton;
     procedure btn_subtrairClick(Sender: TObject);
     procedure btn_somarClick(Sender: TObject);
     procedure btn_multiplicarClick(Sender: TObject);
@@ -47,6 +51,12 @@ type
     procedure btn_7Click(Sender: TObject);
     procedure btn_8Click(Sender: TObject);
     procedure btn_9Click(Sender: TObject);
+    procedure btn_apagarClick(Sender: TObject);
+    procedure btn_0Click(Sender: TObject);
+    procedure btn_pontoClick(Sender: TObject);
+    procedure btn_limparClick(Sender: TObject);
+    procedure btn_cClick(Sender: TObject);
+    procedure btn_porcentagemClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,56 +70,148 @@ implementation
 
 {$R *.fmx}
 
+procedure Tfrm_calculadora.btn_0Click(Sender: TObject);
+begin
+  if lb_operador.Text = '.' then
+  begin
+    lb_numero1.Text := lb_numero1.Text + '0';
+  end
+  else
+  begin
+    lb_numero2.Text := lb_numero2.Text + '0';
+  end;
+end;
+
 procedure Tfrm_calculadora.btn_1Click(Sender: TObject);
 begin
-    if lb_operador.Text = '.' then
-    begin
-      lb_numero1.Text := lb_numero1.Text + '1';  
-    end
-    else
-    begin
-      lb_numero2.Text := lb_numero2.Text + '1';  
-    end;
+  if lb_operador.Text = '.' then
+  begin
+    lb_numero1.Text := lb_numero1.Text + '1';
+  end
+  else
+  begin
+    lb_numero2.Text := lb_numero2.Text + '1';
+  end;
 end;
 
 procedure Tfrm_calculadora.btn_2Click(Sender: TObject);
 begin
-  lb_numero1.Text := lb_numero1.Text + '2';
+  if lb_operador.Text = '.' then
+  begin
+    lb_numero1.Text := lb_numero1.Text + '2';
+  end
+  else
+  begin
+    lb_numero2.Text := lb_numero2.Text + '2';
+  end;
 end;
 
 procedure Tfrm_calculadora.btn_3Click(Sender: TObject);
 begin
-  lb_numero1.Text := lb_numero1.Text + '3';
+  if lb_operador.Text = '.' then
+  begin
+    lb_numero1.Text := lb_numero1.Text + '3';
+  end
+  else
+  begin
+    lb_numero2.Text := lb_numero2.Text + '3';
+  end;
 end;
 
 procedure Tfrm_calculadora.btn_4Click(Sender: TObject);
 begin
-  lb_numero1.Text := lb_numero1.Text + '4';
+  if lb_operador.Text = '.' then
+  begin
+    lb_numero1.Text := lb_numero1.Text + '4';
+  end
+  else
+  begin
+    lb_numero2.Text := lb_numero2.Text + '4';
+  end;
 end;
 
 procedure Tfrm_calculadora.btn_5Click(Sender: TObject);
 begin
+  if lb_operador.Text = '.' then
+  begin
     lb_numero1.Text := lb_numero1.Text + '5';
+  end
+  else
+  begin
+    lb_numero2.Text := lb_numero2.Text + '5';
+  end;
 end;
 
 procedure Tfrm_calculadora.btn_6Click(Sender: TObject);
 begin
-  lb_numero1.Text := lb_numero1.Text + '6';
+  if lb_operador.Text = '.' then
+  begin
+    lb_numero1.Text := lb_numero1.Text + '6';
+  end
+  else
+  begin
+    lb_numero2.Text := lb_numero2.Text + '6';
+  end;
 end;
 
 procedure Tfrm_calculadora.btn_7Click(Sender: TObject);
 begin
-  lb_numero1.Text := lb_numero1.Text + '7';
+  if lb_operador.Text = '.' then
+  begin
+    lb_numero1.Text := lb_numero1.Text + '7';
+  end
+  else
+  begin
+    lb_numero2.Text := lb_numero2.Text + '7';
+  end;
 end;
 
 procedure Tfrm_calculadora.btn_8Click(Sender: TObject);
 begin
-  lb_numero1.Text := lb_numero1.Text + '8';
+  if lb_operador.Text = '.' then
+  begin
+    lb_numero1.Text := lb_numero1.Text + '8';
+  end
+  else
+  begin
+    lb_numero2.Text := lb_numero2.Text + '8';
+  end;
 end;
 
 procedure Tfrm_calculadora.btn_9Click(Sender: TObject);
 begin
-  lb_numero1.Text := lb_numero1.Text + '9';
+  if lb_operador.Text = '.' then
+  begin
+    lb_numero1.Text := lb_numero1.Text + '9';
+  end
+  else
+  begin
+    lb_numero2.Text := lb_numero2.Text + '9';
+  end;
+end;
+
+procedure Tfrm_calculadora.btn_apagarClick(Sender: TObject);
+begin
+  if lb_operador.Text = '.' then
+  begin
+    lb_numero1.Text := copy(lb_numero1.Text, 1, length(lb_numero1.Text) - 1);
+  end
+  else
+  begin
+    lb_numero2.Text := copy(lb_numero2.Text, 1, length(lb_numero2.Text) - 1);
+  end;
+end;
+
+procedure Tfrm_calculadora.btn_cClick(Sender: TObject);
+begin
+  if lb_operador.Text = '.' then
+  begin
+    lb_numero1.Text := '';
+  end
+  else
+  begin
+    lb_numero2.Text := '';
+  end;
 end;
 
 procedure Tfrm_calculadora.btn_dividirClick(Sender: TObject);
@@ -117,6 +219,15 @@ begin
   lb_operador.Text := '/';
   btn_somar.Enabled := true;
   btn_dividir.Enabled := false;
+  btn_multiplicar.Enabled := true;
+  btn_subtrair.Enabled := true;
+end;
+
+procedure Tfrm_calculadora.btn_porcentagemClick(Sender: TObject);
+begin
+  lb_operador.Text := '%';
+  btn_somar.Enabled := true;
+  btn_dividir.Enabled := true;
   btn_multiplicar.Enabled := true;
   btn_subtrair.Enabled := true;
 end;
@@ -131,31 +242,54 @@ begin
   // Efetuando o cálculo
   if (lb_operador.Text = '+') then
   begin
-    txt_resultado.Text := FloatToStr(n1 + n2);
+    lb_resultado.Text := FloatToStr(n1 + n2);
   end
   else if (lb_operador.Text = '-') then
   begin
-    txt_resultado.Text := FloatToStr(n1 - n2);
+    lb_resultado.Text := FloatToStr(n1 - n2);
   end
   else if (lb_operador.Text = '*') then
   begin
-    txt_resultado.Text := FloatToStr(n1 * n2);
+    lb_resultado.Text := FloatToStr(n1 * n2);
   end
   else if (lb_operador.Text = '/') then
   begin
     if n2 <> 0 then
-      txt_resultado.Text := FloatToStr(n1 / n2)
+      lb_resultado.Text := FloatToStr(n1 / n2)
     else
-      txt_resultado.Text := 'Erro: Divisão por zero!';
+      lb_resultado.Text := 'Erro: Divisão por zero!';
+  end
+  else if (lb_operador.Text = '%') then
+  begin
+    lb_resultado.Text := FloatToStr(n1 * (n2 / 100));
   end
   else
   begin
-    txt_resultado.Text := 'Operador inválido!';
+    lb_resultado.Text := 'Operador inválido!';
   end;
 
+  lb_operador.Text := '.'; // Resetando operador
+  lb_numero1.Text := ''; // Resetando número 1
+  lb_numero2.Text := ''; // Resetando número 2
+
+  // Habilitando botões
+  btn_somar.Enabled := true;
+  btn_dividir.Enabled := true;
+  btn_multiplicar.Enabled := true;
+  btn_subtrair.Enabled := true;
+end;
+
+procedure Tfrm_calculadora.btn_limparClick(Sender: TObject);
+begin
   lb_operador.Text := '.';
-  lb_numero1.Text := '0';
-  lb_numero2.Text := '0';
+  lb_numero1.Text := '';
+  lb_numero2.Text := '';
+  lb_resultado.Text := '';
+
+  btn_somar.Enabled := true;
+  btn_dividir.Enabled := true;
+  btn_multiplicar.Enabled := true;
+  btn_subtrair.Enabled := true;
 end;
 
 procedure Tfrm_calculadora.btn_multiplicarClick(Sender: TObject);
@@ -166,6 +300,19 @@ begin
   btn_multiplicar.Enabled := false;
   btn_subtrair.Enabled := true;
 end;
+
+procedure Tfrm_calculadora.btn_pontoClick(Sender: TObject);
+begin
+  if lb_operador.Text = '.' then
+  begin
+    lb_numero1.Text := lb_numero1.Text + ',';
+  end
+  else
+  begin
+    lb_numero2.Text := lb_numero2.Text + ',';
+  end;
+end;
+
 
 procedure Tfrm_calculadora.btn_somarClick(Sender: TObject);
 begin

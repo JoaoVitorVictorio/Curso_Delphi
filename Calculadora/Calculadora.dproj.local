@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2024/10/19 10:02:22.695,=C:\Users\Desktop\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/10/19 10:03:41.864,C:\Users\Desktop\Documents\PASTA DE ESTUDOS\Curso_Delphi\Calculadora\U_Calculadora.pas=C:\Users\Desktop\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/10/19 10:03:41.864,C:\Users\Desktop\Documents\PASTA DE ESTUDOS\Curso_Delphi\Calculadora\U_Calculadora.fmx=C:\Users\Desktop\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
-    <Transaction>2024/10/19 10:04:16.321,C:\Users\Desktop\Documents\PASTA DE ESTUDOS\Curso_Delphi\Calculadora\Calculadora.dproj=C:\Users\Desktop\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+	<Transactions>
+    <Transaction>2024/10/19 10:02:22.000.695,=C:\Users\Desktop\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/10/19 10:03:41.000.864,C:\Users\Desktop\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\Desktop\Documents\PASTA DE ESTUDOS\Curso_Delphi\Calculadora\U_Calculadora.fmx</Transaction>
+    <Transaction>2024/10/19 10:03:41.000.864,C:\Users\Desktop\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Desktop\Documents\PASTA DE ESTUDOS\Curso_Delphi\Calculadora\U_Calculadora.pas</Transaction>
+    <Transaction>2024/10/19 10:04:16.000.321,C:\Users\Desktop\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Desktop\Documents\PASTA DE ESTUDOS\Curso_Delphi\Calculadora\Calculadora.dproj</Transaction>
   </Transactions>
 </BorlandProject>
