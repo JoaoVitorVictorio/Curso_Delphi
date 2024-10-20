@@ -213,7 +213,7 @@ object frm_calculadora: Tfrm_calculadora
       end
       object lb_igual: TLabel
         StyledSettings = [Family, Style, FontColor]
-        Position.X = 187.000000000000000000
+        Position.X = 179.000000000000000000
         Position.Y = 40.000000000000000000
         Size.Width = 22.000000000000000000
         Size.Height = 41.000000000000000000
